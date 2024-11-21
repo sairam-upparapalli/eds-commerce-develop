@@ -25,9 +25,14 @@
 }
 
 .hero img {
-  object-fit: cover;
-  width: 50%;
-  height: 50%;
+  object-fit: contain; /* Maintain aspect ratio */
+  width: auto;         /* Automatically adjust width based on height */
+  height: auto;        /* Automatically adjust height based on width */
+  max-width: 50%;      /* Set a maximum width (adjust percentage as needed) */
+  max-height: 50vh;    /* Set a maximum height relative to viewport */
+  display: block;      /* Ensure it behaves like a block element */
+  margin: 0 auto;      /* Center the image horizontally */
+  position: relative;  /* Allow positioning if necessary */
 }
 
 @media (width >= 900px) {
